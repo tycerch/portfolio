@@ -16,14 +16,14 @@ export default function SocialLinks() {
 
   return (
     <aside className="hidden md:flex flex-col items-center fixed bottom-0 left-8 z-50">
-      <ul className="flex flex-col space-y-4 after:content-[''] after:w-[1px] after:h-24 after:bg-foreground after:mx-auto">
+      <ul className="flex flex-col space-y-5 after:content-[''] after:w-[1px] after:h-24 after:bg-foreground after:mx-auto">
         {links.map((link, idx) => (
           <li key={idx}>
             <Link
               href={link.url}
               target="_blank"
               rel="noreferrer"
-              className="text-xl text-foreground hover:text-highlight transition-colors"
+              className="text-2xl text-foreground hover:text-highlight transition-colors"
             >
               {link.icon}
             </Link>

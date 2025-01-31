@@ -26,10 +26,10 @@
     </filter>
   </defs>
 
-  <!-- Static Background Hexagon -->
+  <!-- Background Hexagon with Gradient Fill -->
   <polygon 
     points="190,100 145,175 55,175 10,100 55,25 145,25"
-    fill="#0b0e11"
+    fill="url(#logoGradient)"
     stroke="#5FFFD7" 
     stroke-width="3"
     filter="url(#glow)"
@@ -43,15 +43,6 @@
       repeatCount="indefinite"
     />
   </circle>
-  
-  <!-- Inner Decorative Hexagon -->
-  <polygon 
-    points="170,100 135,155 65,155 30,100 65,45 135,45"
-    fill="url(#logoGradient)"
-    stroke="#5FFFD7" 
-    stroke-width="1"
-    opacity="0.3"
-  />
   
   <!-- Text: CT -->
   <text 

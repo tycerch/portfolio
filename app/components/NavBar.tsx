@@ -28,22 +28,20 @@ export default function NavBar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 ${
+      className={`fixed top-0 w-full z-50 pt-4 ${
         scrolled ? "bg-background/80 backdrop-blur-sm shadow-lg" : ""
       } transition-colors duration-300`}
     >
-      <div className="container mx-auto container-padding flex items-center justify-between">
-        {/* Logo */}
+      <div className="w-full pl-8 pr-4 md:pr-8 lg:pr-12 flex items-center justify-between">
         <Link href="#hero" className="flex items-center">
           <Image
             src="/logo.svg"
             alt="Logo"
-            width={40}
-            height={40}
+            width={50}
+            height={50}
             className="object-contain"
           />
         </Link>
-
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-6">

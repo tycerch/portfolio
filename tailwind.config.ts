@@ -9,9 +9,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: {
+          DEFAULT: "#0b0e11",
+          light: "#1a1f25",
+        },
+        foreground: "#b2b8bf",
+        highlight: "#5FFFD7",
+        secondary: "#ff6f61",
+        blue: {
+          light: "#1a1f25",
+          DEFAULT: "#526CFE",
+        },
+        slate: {
+          light: "#ccd6f6",
+          DEFAULT: "#8892b0",
+          dark: "#495670",
+        }
       },
+      spacing: {
+        section: "6rem",
+        "section-sm": "4rem"
+      },
+      maxWidth: {
+        container: "1400px",
+        "container-sm": "1200px",
+      }
     },
   },
   plugins: [],

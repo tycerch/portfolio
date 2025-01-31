@@ -1,0 +1,68 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5FFFD7;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#526CFE;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur1"/>
+      <feFlood flood-color="white" result="color"/>
+      <feComposite in="color" in2="blur1" operator="in"/>
+      <feGaussianBlur stdDeviation="5" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Static Background Hexagon -->
+  <polygon 
+    points="190,100 145,175 55,175 10,100 55,25 145,25"
+    fill="#0b0e11"
+    stroke="#5FFFD7" 
+    stroke-width="3"
+    filter="url(#glow)"
+  />
+  
+  <!-- Enhanced Traveling Data Dot -->
+  <circle r="5" fill="white" filter="url(#dotGlow)" opacity="0.9">
+    <animateMotion
+      path="M190,100 L145,175 L55,175 L10,100 L55,25 L145,25 Z"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+  </circle>
+  
+  <!-- Inner Decorative Hexagon -->
+  <polygon 
+    points="170,100 135,155 65,155 30,100 65,45 135,45"
+    fill="url(#logoGradient)"
+    stroke="#5FFFD7" 
+    stroke-width="1"
+    opacity="0.3"
+  />
+  
+  <!-- Text: CT -->
+  <text 
+    x="50%" 
+    y="55%" 
+    font-size="75" 
+    font-family="ui-monospace, monospace" 
+    font-weight="bold"
+    fill="#5FFFD7" 
+    text-anchor="middle" 
+    alignment-baseline="middle"
+    filter="url(#glow)"
+  >CT</text>
+</svg>

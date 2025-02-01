@@ -1,8 +1,8 @@
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#5FFFD7;stop-opacity:0.2" />
-      <stop offset="100%" style="stop-color:#526CFE;stop-opacity:0.1" />
+      <stop offset="0%" style="stop-color:#86C232;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#61892F;stop-opacity:0.1" />
     </linearGradient>
     
     <filter id="glow">
@@ -15,7 +15,7 @@
 
     <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
       <feGaussianBlur stdDeviation="3" result="blur1"/>
-      <feFlood flood-color="white" result="color"/>
+      <feFlood flood-color="#86C232" result="color"/>
       <feComposite in="color" in2="blur1" operator="in"/>
       <feGaussianBlur stdDeviation="5" result="blur2"/>
       <feMerge>
@@ -30,13 +30,13 @@
   <polygon 
     points="190,100 145,175 55,175 10,100 55,25 145,25"
     fill="url(#logoGradient)"
-    stroke="#5FFFD7" 
+    stroke="#86C232" 
     stroke-width="3"
     filter="url(#glow)"
   />
   
   <!-- Enhanced Traveling Data Dot -->
-  <circle r="5" fill="white" filter="url(#dotGlow)" opacity="0.9">
+  <circle r="5" fill="#86C232" filter="url(#dotGlow)" opacity="0.9">
     <animateMotion
       path="M190,100 L145,175 L55,175 L10,100 L55,25 L145,25 Z"
       dur="3s"
@@ -51,7 +51,7 @@
     font-size="75" 
     font-family="ui-monospace, monospace" 
     font-weight="bold"
-    fill="#5FFFD7" 
+    fill="#86C232" 
     text-anchor="middle" 
     alignment-baseline="middle"
     filter="url(#glow)"

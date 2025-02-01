@@ -12,27 +12,25 @@ export default function About() {
         {/* Text Content */}
         <div className="md:w-2/3 text-slate-300 leading-7">
           <p className="mb-4">
-            I am a data-driven problem solver with over 15 years of experience in
-            supply chain optimization, forecasting, and data analytics. Passionate
-            about transforming complex data into actionable insights, I specialize
-            in leveraging machine learning, predictive analytics, and business
-            intelligence to enhance decision-making and drive operational efficiency.
+            I am a data-driven problem solver with over 15 years of experience in supply chain optimization, forecasting, and data analytics.
+            Passionate about transforming complex data into actionable insights, I specialize in leveraging machine learning, predictive analytics, and business intelligence to enhance decision-making and drive operational efficiency.
           </p>
           <p className="mb-4">
-            With deep expertise in education data and supply chain analytics, I’ve
-            architected end-to-end analytics solutions—from ETL pipelines and data
-            warehouses (BigQuery) to BI platforms (Apache Superset). Working in
-            resource-constrained environments has made me cost-conscious and
-            skilled in leveraging open-source tools to deliver high-impact
-            solutions under budget. My focus is always on building scalable,
-            data-driven systems that not only solve today’s challenges but also
-            anticipate tomorrow’s needs.
+            With deep expertise in education data and supply chain analytics, I’ve architected end-to-end analytics solutions—from ETL pipelines and data warehouses to BI platforms.
+            My focus is on building scalable, data-driven systems that solve today’s challenges while anticipating tomorrow’s needs.
+          </p>
+          <p className="mb-4">
+            <strong>Skills:</strong> SQL, Python, Systems Design & Analysis, Machine Learning, Forecasting, and Business Intelligence.
           </p>
         </div>
 
-        {/* Image */}
+        {/* Portrait Image */}
         <div className="md:w-1/3 relative group">
-          <div className="relative w-full h-0 pb-[100%] overflow-hidden rounded-md">
+          {/*
+            Expected image specs: Resize your portrait image (me.png) to an aspect ratio of approximately 2659:2293 (≈1.16).
+            Optimize and crop the image to best highlight your profile.
+          */}
+          <div className="relative w-full aspect-[2659/2293] overflow-hidden rounded-md">
             <Image
               src="/me.png"
               alt="Chris Tycer"

@@ -69,13 +69,8 @@ export default function Projects() {
         <div className="ml-4 flex-grow border-t border-slate-700" />
       </h2>
 
-      <div className="mb-16">
-        <h3 className="text-xl font-bold text-white mb-6">Current Project</h3>
+      <div className="space-y-16">
         <ProjectDisplay project={currentProject} />
-      </div>
-
-      <div>
-        <h3 className="text-xl font-bold text-white mb-6">Past Projects</h3>
         <ProjectDisplay project={completedProject} />
       </div>
     </section>

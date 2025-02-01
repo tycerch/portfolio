@@ -16,20 +16,20 @@ export default function SocialLinks() {
 
   return (
     <aside className="hidden md:flex flex-col items-center fixed bottom-0 left-8 z-50">
-      <ul className="flex flex-col space-y-5 after:content-[''] after:w-[1px] after:h-24 after:bg-foreground after:mx-auto">
-        {links.map((link, idx) => (
-          <li key={idx}>
-            <Link
-              href={link.url}
-              target="_blank"
-              rel="noreferrer"
-              className="text-2xl text-foreground hover:text-highlight transition-colors"
-            >
-              {link.icon}
-            </Link>
-          </li>
+      <div className="flex flex-col gap-6">
+        {links.map((link, i) => (
+          <a
+            key={i}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-slate-300 hover:text-highlight transition-colors duration-200 text-xl"
+          >
+            {link.icon}
+          </a>
         ))}
-      </ul>
+      </div>
+      <div className="w-px h-24 bg-slate-300 mt-6"></div>
     </aside>
   );
 }

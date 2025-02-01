@@ -1,6 +1,7 @@
 import { TimelineList } from "../components/timeline/TimelineList";
 import { TimelineItem } from "../components/timeline/TimelineItem";
 import { FaShippingFast, FaChartLine } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Experience() {
   // Timeline data in descending order (most recent first)
@@ -55,7 +56,7 @@ export default function Experience() {
     },
   ];
 
-  // Map timeline data with larger icons (size 24) for a stronger “period” effect.
+  // Map timeline data with larger icons for a stronger “period” effect.
   const timelineDataWithIcons = timelineData.map((item) => {
     let icon;
     if (item.title === "Data Analyst" || item.company === "PixelFin LLC") {
@@ -67,8 +68,14 @@ export default function Experience() {
   });
 
   return (
-    <section className="mx-auto max-w-4xl py-24 px-8">
-      <TimelineList title="Experience">
+    <section id="experience" className="mx-auto max-w-4xl py-24 px-8">
+      {/* Experience Section Heading */}
+      <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
+        <span className="text-highlight mr-2">03.</span> Experience
+        <div className="ml-4 flex-grow border-t border-slate-700" />
+      </h2>
+
+      <TimelineList>
         {timelineDataWithIcons.map((item, index) => (
           <TimelineItem key={index} {...item} />
         ))}

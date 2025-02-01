@@ -7,8 +7,8 @@ export default function Contact() {
         <span className="text-highlight mr-2">04.</span> Contact
       </h2>
       <p className="text-slate-300 mb-6">
-        Interested in discussing a project, or just want to say hello? My inbox is always open.
-        Whether you have a question or just want to chat, I’ll try my best to get back to you!
+        Interested in discussing opportunities in supply chain analytics, forecasting, or BI development? My inbox is always open.
+        Feel free to reach out with any questions or just to connect.
       </p>
       <Link href="mailto:chris@tycer.dev" className="highlight-button">
         Say Hello

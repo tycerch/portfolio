@@ -1,7 +1,6 @@
 import { TimelineList } from "../components/timeline/TimelineList";
 import { TimelineItem } from "../components/timeline/TimelineItem";
 import { FaShippingFast, FaChartLine } from "react-icons/fa";
-import Link from "next/link";
 
 export default function Experience() {
   // Timeline data in descending order (most recent first)

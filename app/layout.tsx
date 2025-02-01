@@ -7,30 +7,33 @@ import SocialLinks from "./components/SocialLinks";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chris Tycer",
+  title: "Chris Tycer - Data & Supply Chain Analyst",
   description:
-    "Chris Tycer is a data analyst and full-stack developer specializing in data pipelines, analytics solutions, and machine learning applications.",
+    "Chris Tycer is a seasoned supply chain and data analytics professional specializing in forecasting, BI development, and systems design. Explore my portfolio to learn more.",
   keywords: [
-    "Data Analyst",
-    "Full Stack Developer",
-    "Machine Learning",
-    "Analytics",
+    "Supply Chain Analyst",
+    "Forecasting",
+    "BI Developer",
+    "Data Analytics",
     "Python",
-    "Next.js",
+    "SQL",
+    "Systems Design",
   ],
   creator: "Chris Tycer",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://tycer.dev",
-    title: "Chris Tycer",
-    description: "Data analyst and full-stack developer specializing in analytics solutions",
+    title: "Chris Tycer - Data & Supply Chain Analyst",
+    description:
+      "Explore the portfolio of Chris Tycer, a data-driven professional specializing in supply chain optimization, forecasting, and business intelligence.",
     siteName: "Chris Tycer Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chris Tycer",
-    description: "Data analyst and full-stack developer specializing in analytics solutions",
+    title: "Chris Tycer - Data & Supply Chain Analyst",
+    description:
+      "Data-driven professional specializing in supply chain optimization, forecasting, and BI development.",
     creator: "@tycerch",
   },
 };

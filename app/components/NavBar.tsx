@@ -21,9 +21,10 @@ export default function NavBar() {
 
   const navItems: NavItem[] = [
     { number: "01.", label: "About", href: "#about" },
-    { number: "02.", label: "Experience", href: "#experience" },
-    { number: "03.", label: "Projects", href: "#work" },
-    { number: "04.", label: "Contact", href: "#contact" },
+    { number: "02.", label: "Certifications", href: "#certifications" },
+    { number: "03.", label: "Experience", href: "#experience" },
+    { number: "04.", label: "Projects", href: "#projects" },
+    { number: "05.", label: "Contact", href: "#contact" },
   ];
 
   return (
@@ -34,7 +35,13 @@ export default function NavBar() {
     >
       <div className="w-full px-8 flex items-center justify-between">
         <Link href="#hero" className="flex items-center">
-          <Image src="/logo.svg" alt="Logo" width={50} height={50} className="object-contain" />
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={50}
+            height={50}
+            className="object-contain"
+          />
         </Link>
         <nav>
           <ul className="flex items-center gap-8">
@@ -44,7 +51,9 @@ export default function NavBar() {
                   href={href}
                   className="group flex items-center text-slate-300 hover:text-highlight transition-colors duration-200"
                 >
-                  <span className="font-mono text-sm text-highlight mr-1">{number}</span>
+                  <span className="font-mono text-sm text-highlight mr-1">
+                    {number}
+                  </span>
                   {label}
                 </Link>
               </li>

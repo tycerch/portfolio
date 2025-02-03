@@ -1,8 +1,8 @@
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#86C232;stop-opacity:0.2" />
-      <stop offset="100%" style="stop-color:#61892F;stop-opacity:0.1" />
+      <stop offset="0%" style="stop-color:#66FCF1;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#45A29E;stop-opacity:0.2" />
     </linearGradient>
     
     <filter id="glow">
@@ -13,14 +13,21 @@
       </feMerge>
     </filter>
 
-    <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="3" result="blur1"/>
-      <feFlood flood-color="#86C232" result="color"/>
-      <feComposite in="color" in2="blur1" operator="in"/>
-      <feGaussianBlur stdDeviation="5" result="blur2"/>
+    <filter id="dotGlow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
       <feMerge>
-        <feMergeNode in="blur1"/>
-        <feMergeNode in="blur2"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Add new stronger text glow filter -->
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#66FCF1" flood-opacity="0.5"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
@@ -30,13 +37,14 @@
   <polygon 
     points="190,100 145,175 55,175 10,100 55,25 145,25"
     fill="url(#logoGradient)"
-    stroke="#86C232" 
+    stroke="#66FCF1" 
     stroke-width="3"
+    stroke-opacity="0.3"
     filter="url(#glow)"
   />
   
   <!-- Enhanced Traveling Data Dot -->
-  <circle r="5" fill="#86C232" filter="url(#dotGlow)" opacity="0.9">
+  <circle r="5" fill="#66FCF1" filter="url(#dotGlow)" opacity="0.4">
     <animateMotion
       path="M190,100 L145,175 L55,175 L10,100 L55,25 L145,25 Z"
       dur="3s"
@@ -44,16 +52,43 @@
     />
   </circle>
   
-  <!-- Text: CT -->
+  <!-- Base black text layer for contrast -->
   <text 
     x="50%" 
-    y="55%" 
-    font-size="75" 
+    y="53%" 
+    font-size="82" 
     font-family="ui-monospace, monospace" 
-    font-weight="bold"
-    fill="#86C232" 
+    font-weight="900"
+    fill="black" 
     text-anchor="middle" 
     alignment-baseline="middle"
-    filter="url(#glow)"
+    opacity="0.15"
+  >CT</text>
+
+  <!-- Middle white text layer -->
+  <text 
+    x="50%" 
+    y="53%" 
+    font-size="82" 
+    font-family="ui-monospace, monospace" 
+    font-weight="900"
+    fill="white" 
+    text-anchor="middle" 
+    alignment-baseline="middle"
+    opacity="0.7"
+  >CT</text>
+
+  <!-- Top highlight colored text -->
+  <text 
+    x="50%" 
+    y="53%" 
+    font-size="82" 
+    font-family="ui-monospace, monospace" 
+    font-weight="900"
+    fill="#66FCF1" 
+    text-anchor="middle" 
+    alignment-baseline="middle"
+    opacity="0.25"
+    filter="url(#textGlow)"
   >CT</text>
 </svg>

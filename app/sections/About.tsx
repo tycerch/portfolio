@@ -5,8 +5,11 @@ import React from "react";
 const skills = [
   { name: "Forecasting/ML", rating: 8 },
   { name: "BI & Dashboards", rating: 7 },
-  { name: "SQL", rating: 6 },
-  { name: "Python", rating: 5 },
+  { name: "SQL", rating: 5 },
+  { name: "Python", rating: 6 },
+  { name: "Prompt Engineering", rating: 7 },
+  { name: "Supply Chain Optimization", rating: 9 },
+
 ];
 
 export default function About() {

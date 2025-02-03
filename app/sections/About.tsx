@@ -25,9 +25,9 @@ export default function About() {
         <div className="md:w-2/3 text-foreground leading-7">
           <p className="mb-4">
             I am a data-driven problem solver with over 15 years of experience in supply chain optimization, 
-            forecasting, and data analytics. I transform complex data into actionable insights by leveraging 
-            machine learning, predictive analytics, and business intelligence to drive operational efficiency 
-            and improve decision-making.
+            forecasting, and data analytics—based in Portland, Oregon. I transform complex data into actionable 
+            insights by leveraging machine learning, predictive analytics, and business intelligence to drive 
+            operational efficiency and improve decision-making.
           </p>
           <p className="mb-4">
             My expertise spans architecting end-to-end analytics solutions—from building robust ETL pipelines 

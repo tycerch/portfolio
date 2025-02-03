@@ -2,7 +2,6 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-4xl min-h-[calc(100vh-80px)] flex flex-col justify-center py-32 px-8">
       <p className="text-highlight text-lg md:text-xl mb-1 font-mono">Hi, I&apos;m Chris Tycer</p>
-      <p className="text-foreground text-md mb-4">Based in Portland, Oregon</p>
       
       <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
         Data & Supply Chain Analyst.

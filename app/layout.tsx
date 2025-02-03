@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import SocialLinks from "./components/SocialLinks";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,8 +44,35 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chris Tycer",
+    "url": "https://tycer.dev",
+    "sameAs": [
+      "https://github.com/tycerch",
+      "https://linkedin.com/in/chris-tycer-632b9796"
+    ],
+    "jobTitle": "Data & Supply Chain Analyst",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "addressCountry": "US"
+    }
+  };
+
   return (
     <html lang="en" className={inter.className}>
+      <Head>
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://tycer.dev" />
+        {/* Structured Data in JSON-LD format */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
       <body className="bg-background text-foreground font-sans antialiased">
         <NavBar />
         <SocialLinks />

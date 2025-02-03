@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
@@ -23,13 +22,13 @@ export default function SocialLinks() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-300 hover:text-highlight transition-colors duration-200 text-xl"
+            className="text-foreground hover:text-highlight transition-colors duration-200 text-xl"
           >
             {link.icon}
           </a>
         ))}
       </div>
-      <div className="w-px h-24 bg-slate-300 mt-6"></div>
+      <div className="w-px h-24 bg-foreground mt-6"></div>
     </aside>
   );
 }

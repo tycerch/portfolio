@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tycer.dev
+
+# Sitemaps
+Sitemap: https://tycer.dev/sitemap.xml

@@ -10,17 +10,12 @@ export default {
     extend: {
       colors: {
         background: {
-          DEFAULT: "#222629",
-          light: "#474B4F",
+          DEFAULT: "#0B0C10",
+          light: "#1F2833",
         },
-        foreground: "#6B6E70",
-        highlight: "#86C232",
-        accent: "#61892F",
-        slate: {
-          light: "#6B6E70",
-          DEFAULT: "#474B4F",
-          dark: "#222629",
-        },
+        foreground: "#C5C6C7",
+        highlight: "#66FCF1",
+        accent: "#45A29E",
       },
       spacing: {
         section: "6rem",

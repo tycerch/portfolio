@@ -21,17 +21,16 @@ export default function About() {
         {/* Text Content */}
         <div className="md:w-2/3 text-foreground leading-7">
           <p className="mb-4">
-            I am a data-driven problem solver with over 15 years of experience in supply
-            chain optimization, forecasting, and data analytics. Passionate about
-            transforming complex data into actionable insights, I specialize in leveraging
-            machine learning, predictive analytics, and business intelligence to enhance
-            decision-making and drive operational efficiency.
+            I am a data-driven problem solver with over 15 years of experience in supply chain optimization, 
+            forecasting, and data analytics. I transform complex data into actionable insights by leveraging 
+            machine learning, predictive analytics, and business intelligence to drive operational efficiency 
+            and improve decision-making.
           </p>
           <p className="mb-4">
-            With deep expertise in education data and supply chain analytics, I’ve architected
-            end-to-end analytics solutions—from ETL pipelines and data warehouses to BI platforms.
-            My focus is on building scalable, data-driven systems that solve today’s challenges
-            while anticipating tomorrow’s needs.
+            My expertise spans architecting end-to-end analytics solutions—from building robust ETL pipelines 
+            and scalable data warehouses on BigQuery to deploying cost-effective BI platforms like Apache Superset 
+            and developing predictive models. With a deep background in education data and supply chain analytics, 
+            I design systems that address today’s challenges while anticipating tomorrow’s needs.
           </p>
         </div>
 

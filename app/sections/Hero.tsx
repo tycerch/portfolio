@@ -9,8 +9,9 @@ export default function Hero() {
         I build data-driven solutions.
       </h2>
       <p className="max-w-2xl text-foreground text-lg mb-12">
-        With over 15 years of experience in supply chain optimization, forecasting, and data analytics,
-        I specialize in crafting scalable, actionable systems that empower businesses to make informed decisions.
+        With over 15 years of experience in supply chain optimization, forecasting, and data analytics, 
+        I design scalable data infrastructures and predictive models that empower businesses with actionable 
+        insights and operational efficiency.
       </p>
       <div className="flex gap-4">
         <a

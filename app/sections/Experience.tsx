@@ -16,35 +16,35 @@ export default function Experience() {
       title: "Data Analyst",
       dateTime: "Jun 2022 – Oct 2024",
       description:
-        "Architected and deployed an Apache Superset BI platform with 90% adoption.  Designed Dashboards for 7 Departments. Built and trained advanced systems for entity resolution and data deduplication, and implemented a scalable data warehouse with BigQuery.",
+        "Built the company’s first data ecosystem by geocoding customer data, performing entity resolution with NCES, deduplication, and deploying a scalable BigQuery data warehouse. Deployed Apache Superset on Docker with robust ETL pipelines using Airbyte, delivering real-time dashboards across departments. Managed forecasting for a $50M revenue stream, optimizing inventory and saving an estimated $2M annually.",
     },
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
       title: "Master Scheduler",
-      dateTime: "Dec 2018 – Jun 2022",
+      dateTime: "Jan 2019 – Jun 2022",
       description:
-        "Developed Python-based forecasting systems for 500+ SKUs using neural networks, optimized production scheduling across departments, and designed simulations to optimize safety stock levels.",
+        "Developed a Python-based forecasting system using Nixtla’s NBEATS neural networks to cover over 500 SKUs—doubling forecast scope and enhancing accuracy. Deployed a real-time production optimizer that automated scheduling across five departments, boosting on-time delivery and reducing manual workload. Optimized safety stock levels for 4,300+ SKUs via a Python/SimPy simulation and implemented an MRP-integrated push-pull system to streamline purchasing.",
     },
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
       title: "Sr. Materials Buyer/Planner",
       dateTime: "Jan 2018 – Jan 2019",
       description:
-        "Implemented an Excel EOQ model to optimize purchasing, managed all production scheduling, and coordinated with key suppliers to ensure continuity in production.",
+        "Developed and deployed an Excel-based EOQ model to optimize purchasing quantities and drive cost efficiency. Oversaw comprehensive production scheduling and collaborated with key suppliers and contract manufacturers to ensure uninterrupted production and cost-effective procurement.",
     },
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
       title: "Materials Planner I & II",
       dateTime: "Jan 2010 – Jan 2018",
       description:
-        "Configured the MRP system for multi-warehouse operations and managed all production scheduling, ensuring alignment with demand forecasts and efficient resource utilization.",
+        "Configured and maintained a robust MRP system for multi-warehouse operations, consignment inventory, and multi-step BOM production. Managed internal production scheduling to align with demand forecasts, ensuring efficient resource utilization and timely order fulfillment.",
     },
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Purchasing & Materials Assistant",
+      title: "Purchasing Assistant",
       dateTime: "Jan 2007 – Jan 2010",
       description:
-        "Handled the majority of purchasing operations and managed stockroom logistics to support production schedules.",
+        "Executed core purchasing operations and managed stockroom logistics to support production schedules. Maintained accurate inventory records and facilitated a smooth flow of materials to ensure continuous production.",
     },
   ];
 

@@ -1,16 +1,25 @@
 import Image from "next/image";
+import React from "react";
+
+// We'll define skill data inline
+const skills = [
+  { name: "Forecasting/ML", rating: 8 },
+  { name: "BI & Dashboards", rating: 7 },
+  { name: "SQL", rating: 6 },
+  { name: "Python", rating: 5 },
+];
 
 export default function About() {
   return (
     <section className="mx-auto max-w-4xl py-24 px-8" id="about">
       <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
         <span className="text-highlight mr-2">01.</span> About Me
-        <div className="ml-4 flex-grow border-t border-slate-700" />
+        <div className="ml-4 flex-grow border-t border-foreground/20" />
       </h2>
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* Text Content */}
-        <div className="md:w-2/3 text-slate-300 leading-7">
+        <div className="md:w-2/3 text-foreground leading-7">
           <p className="mb-4">
             I am a data-driven problem solver with over 15 years of experience in supply
             chain optimization, forecasting, and data analytics. Passionate about
@@ -23,10 +32,6 @@ export default function About() {
             end-to-end analytics solutions—from ETL pipelines and data warehouses to BI platforms.
             My focus is on building scalable, data-driven systems that solve today’s challenges
             while anticipating tomorrow’s needs.
-          </p>
-          <p className="mb-4">
-            <strong>Skills:</strong> SQL, Python, Systems Design & Analysis, Machine Learning,
-            Forecasting, and Business Intelligence.
           </p>
         </div>
 
@@ -46,6 +51,33 @@ export default function About() {
               />
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Skills embedded below the text/image */}
+      <div className="mt-12">
+        <h3 className="text-xl font-bold text-white mb-4">Core Skills</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {skills.map((skill, idx) => (
+            <div key={idx} className="flex flex-col gap-2">
+              {/* Skill Name */}
+              <p className="text-foreground font-medium">{skill.name}</p>
+
+              {/* Stepped Visualization: 10 small squares */}
+              <div className="flex items-center gap-1">
+                {Array.from({ length: 10 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className={
+                      i < skill.rating
+                        ? "h-3 w-3 bg-highlight rounded-sm"
+                        : "h-3 w-3 bg-foreground/20 rounded-sm"
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

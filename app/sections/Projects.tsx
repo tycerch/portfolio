@@ -9,6 +9,7 @@ interface Project {
   tech: string[];
   external: string;
   image: string;
+  alt: string;
 }
 
 export default function Projects() {
@@ -19,6 +20,7 @@ export default function Projects() {
     tech: ["FastAPI", "Next.js", "Python", "Docker"],
     external: "https://forecastify.ai",
     image: "/forecastify-ai.png",
+    alt: "Screenshot of Forecastify.ai homepage",
   };
 
   const portfolio: Project = {
@@ -28,6 +30,7 @@ export default function Projects() {
     tech: ["Next.js", "TypeScript", "TailwindCSS"],
     external: "https://github.com/tycerch/portfolio",
     image: "/portfolio.png",
+    alt: "Screenshot of Tycer.dev portfolio website",
   };
 
   const projects = [forecastify, portfolio];
@@ -57,7 +60,7 @@ export default function Projects() {
                 <div className="relative aspect-[899/656] bg-background-light rounded-md overflow-hidden">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={project.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"

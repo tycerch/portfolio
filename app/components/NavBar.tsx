@@ -38,7 +38,7 @@ export default function NavBar() {
         >
           <Image
             src="/logo.svg"
-            alt="Logo"
+            alt="Logo for tycer.dev"
             width={50}
             height={50}
             className="object-contain"

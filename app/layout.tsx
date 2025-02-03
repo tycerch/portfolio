@@ -51,7 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <main className="pt-[80px] min-h-screen max-w-[100vw] overflow-x-hidden">
           {children}
         </main>
-        <footer className="py-6 text-center text-sm text-slate-400">
+        <footer className="py-6 text-center text-sm text-foreground/60">
           <p>© {new Date().getFullYear()} Chris Tycer. All rights reserved.</p>
         </footer>
       </body>

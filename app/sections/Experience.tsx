@@ -16,35 +16,21 @@ export default function Experience() {
       title: "Data Analyst",
       dateTime: "Jun 2022 – Oct 2024",
       description:
-        "Built the company’s first data ecosystem by geocoding customer data, performing entity resolution with NCES, deduplication, and deploying a scalable BigQuery data warehouse. Deployed Apache Superset on Docker with robust ETL pipelines using Airbyte, delivering real-time dashboards across departments. Managed forecasting for a $50M revenue stream, optimizing inventory and saving an estimated $2M annually.",
+        "Transformed data operations by deploying the company’s first centralized BigQuery warehouse with robust Airbyte ETL pipelines and star schema models. Implemented Apache Superset on Docker to deliver 32 interactive dashboards from 58 SQL datasets—achieving a 90% adoption rate and saving ~$100K/year in licensing fees. Developed Python tools for geocoding 100K+ customer codes, enriching profiles by linking with NCES data, and upgraded the forecasting pipeline for a ~$50M revenue stream, while reducing inventory by ~$500K.",
     },
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
       title: "Master Scheduler",
       dateTime: "Jan 2019 – Jun 2022",
       description:
-        "Developed a Python-based forecasting system using Nixtla’s NBEATS neural networks to cover over 500 SKUs—doubling forecast scope and enhancing accuracy. Deployed a real-time production optimizer that automated scheduling across five departments, boosting on-time delivery and reducing manual workload. Optimized safety stock levels for 4,300+ SKUs via a Python/SimPy simulation and implemented an MRP-integrated push-pull system to streamline purchasing.",
+        "Optimized forecasting for 500+ SKUs covering a $50M revenue stream using Meta’s Prophet algorithm. Brokered $6M in emergency component purchases during supply chain disruptions—averting a multi-year shutdown and saving ~$90K in fees. Developed a real-time Python production optimizer that streamlined workflows (reducing admin overhead by ~2 FTEs) and overhauled purchasing with a dynamic push-pull Excel tool, achieving a ~$2M reduction in inventory value.",
     },
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
       title: "Sr. Materials Buyer/Planner",
-      dateTime: "Jan 2018 – Jan 2019",
+      dateTime: "Jan 2007 – Jan 2019",
       description:
-        "Developed and deployed an Excel-based EOQ model to optimize purchasing quantities and drive cost efficiency. Oversaw comprehensive production scheduling and collaborated with key suppliers and contract manufacturers to ensure uninterrupted production and cost-effective procurement.",
-    },
-    {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Materials Planner I & II",
-      dateTime: "Jan 2010 – Jan 2018",
-      description:
-        "Configured and maintained a robust MRP system for multi-warehouse operations, consignment inventory, and multi-step BOM production. Managed internal production scheduling to align with demand forecasts, ensuring efficient resource utilization and timely order fulfillment.",
-    },
-    {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Purchasing Assistant",
-      dateTime: "Jan 2007 – Jan 2010",
-      description:
-        "Executed core purchasing operations and managed stockroom logistics to support production schedules. Maintained accurate inventory records and facilitated a smooth flow of materials to ensure continuous production.",
+        "Progressed from Purchasing Assistant to Sr. Materials Buyer/Planner, configuring and maintaining MRP/ERP systems for multi-warehouse operations. Managed production scheduling and procurement for key suppliers with a $10M annual spend, ensuring seamless production and cost-effective operations.",
     },
   ];
 

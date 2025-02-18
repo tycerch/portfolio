@@ -9,7 +9,7 @@ interface SocialLink {
 export default function SocialLinks() {
   const links: SocialLink[] = [
     { icon: <FaGithub />, url: "https://github.com/tycerch" },
-    { icon: <FaLinkedin />, url: "https://linkedin.com/in/chris-tycer-632b9796" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/chris-tycer-632b9796/" },
     { icon: <FaEnvelope />, url: "mailto:chris@tycer.dev" },
   ];
 

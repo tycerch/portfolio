@@ -14,7 +14,7 @@ export default function SocialLinks() {
   ];
 
   return (
-    <aside className="hidden md:flex flex-col items-center fixed bottom-0 left-8 z-50">
+    <aside className="hidden md:flex flex-col items-center fixed bottom-12 left-8 z-50">
       <div className="flex flex-col gap-6">
         {links.map((link, i) => (
           <a
@@ -28,7 +28,6 @@ export default function SocialLinks() {
           </a>
         ))}
       </div>
-      <div className="w-px h-24 bg-foreground mt-6"></div>
     </aside>
   );
 }

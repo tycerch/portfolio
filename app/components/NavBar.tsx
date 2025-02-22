@@ -57,15 +57,6 @@ export default function NavBar() {
               {label}
             </Link>
           ))}
-          {/* Resume Button */}
-          <a
-            href="https://drive.google.com/file/d/1b00tEEyP5fJV8h4i4yek-K-lkDlkgiLl/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ml-4 inline-block px-4 py-2 border border-highlight text-highlight rounded hover:bg-highlight hover:text-background transition-all"
-          >
-            Resume
-          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -94,16 +85,6 @@ export default function NavBar() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a
-                href="https://drive.google.com/file/d/1b00tEEyP5fJV8h4i4yek-K-lkDlkgiLl/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center px-4 py-2 border border-highlight text-highlight rounded hover:bg-highlight hover:text-background transition-all"
-              >
-                Resume
-              </a>
-            </li>
           </ul>
         </div>
       )}

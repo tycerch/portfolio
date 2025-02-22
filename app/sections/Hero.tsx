@@ -16,10 +16,10 @@ export default function Hero() {
       </p>
       <div className="flex gap-4">
         <a
-          href="mailto:chris@tycer.dev"
+          href="https://drive.google.com/file/d/1b00tEEyP5fJV8h4i4yek-K-lkDlkgiLl/view?usp=sharing"
           className="highlight-button text-lg px-8 py-4"
         >
-          Get In Touch
+          Resume
         </a>
       </div>
     </section>

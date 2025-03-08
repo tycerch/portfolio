@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import SocialLinks from "./components/SocialLinks";
-import Head from "next/head";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,15 +64,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang="en" className={inter.className}>
-      <Head>
-        {/* Canonical URL */}
+      <head>
         <link rel="canonical" href="https://tycer.dev" />
-        {/* Structured Data in JSON-LD format */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+        <Script id="structured-data" type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </Script>
+      </head>
       <body className="bg-background text-foreground font-sans antialiased">
         <NavBar />
         <SocialLinks />

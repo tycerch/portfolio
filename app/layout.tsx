@@ -51,7 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     "url": "https://tycer.dev",
     "sameAs": [
       "https://github.com/tycerch",
-      "https://www.linkedin.com/in/chris-tycer-632b9796/"
+      "https://www.linkedin.com/in/christycer/"
     ],
     "jobTitle": "Data & Supply Chain Analyst",
     "address": {

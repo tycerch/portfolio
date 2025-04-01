@@ -24,16 +24,14 @@ export default function About() {
         {/* Text Content */}
         <div className="md:w-2/3 text-foreground leading-7">
           <p className="mb-4">
-            I am a data-driven problem solver with over 15 years of experience in supply chain optimization, 
-            forecasting, and data analytics—based in Portland, Oregon. I transform complex data into actionable 
-            insights by leveraging machine learning, predictive analytics, and business intelligence to drive 
-            operational efficiency and improve decision-making.
+            My path has been one of continuous evolution, starting deep within supply chain operations and naturally progressing towards a focus on data analytics. 
+            Over 18 years, primarily with one company, I&apos;ve moved from managing procurement and planning to architecting data solutions, 
+            driven by a consistent desire to optimize processes and uncover efficiencies.
           </p>
           <p className="mb-4">
-            My expertise spans architecting end-to-end analytics solutions—from building robust ETL pipelines 
-            and scalable data warehouses on BigQuery to deploying cost-effective BI platforms like Apache Superset 
-            and developing predictive models. With a deep background in education data and supply chain analytics, 
-            I design systems that address today’s challenges while anticipating tomorrow’s needs.
+            What truly motivates me is leveraging technology—whether configuring ERP systems, developing Python tools, or building BI dashboards —to bring clarity to complex situations. 
+            I enjoy not just analyzing data, but building systems and tools that empower others to make better decisions, a passion that continues with personal projects like forecastify.ai.
+            I approach problems with a blend of analytical rigor gained from data science and a practical, results-oriented mindset honed through years of operational experience.
           </p>
         </div>
 

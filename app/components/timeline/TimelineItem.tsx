@@ -4,7 +4,7 @@ interface TimelineItemProps {
   company: string | React.ReactElement;
   title: string;
   dateTime: string;
-  description: string;
+  description: string[] | string; // Modified to accept array of strings
   icon: React.ReactNode;
 }
 
@@ -27,7 +27,17 @@ export function TimelineItem({
           {title} <span className="text-highlight">@ {company}</span>
         </h3>
         <p className="text-foreground/70 text-sm">{dateTime}</p>
-        <p className="mt-2 text-foreground">{description}</p>
+        {Array.isArray(description) ? (
+          <ul className="mt-2 list-disc list-inside space-y-1">
+            {description.map((bullet, index) => (
+              <li key={index} className="text-foreground">
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="mt-2 text-foreground">{description}</p>
+        )}
       </div>
     </div>
   );

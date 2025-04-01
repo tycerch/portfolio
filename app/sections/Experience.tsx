@@ -1,44 +1,122 @@
 import { TimelineList } from "../components/timeline/TimelineList";
 import { TimelineItem } from "../components/timeline/TimelineItem";
-import { FaShippingFast, FaChartLine } from "react-icons/fa";
+import { 
+  FaChartLine, 
+  FaShippingFast, 
+  FaBoxes, 
+  FaClipboardList,
+  FaHandshake,
+  FaFileAlt
+} from "react-icons/fa";
 
 export default function Experience() {
   const timelineData = [
     {
-      company: "PixelFin LLC",
-      title: "Owner/Developer",
-      dateTime: "Nov 2024 – Present",
-      description:
-        "Developing Forecastify.ai, a FastAPI & Next.js web application tailored for small businesses to effortlessly generate forecasts using time series foundation models.",
-    },
-    {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
       title: "Data Analyst",
-      dateTime: "Jun 2022 – Oct 2024",
-      description:
-        "Transformed data operations by deploying the company’s first centralized BigQuery warehouse with robust Airbyte ETL pipelines and star schema models. Implemented Apache Superset on Docker to deliver 32 interactive dashboards from 58 SQL datasets—achieving a 90% adoption rate and saving ~$100K/year in licensing fees. Developed Python tools for geocoding 100K+ customer codes, enriching profiles by linking with NCES data, and upgraded the forecasting pipeline for a ~$50M revenue stream, while reducing inventory by ~$500K.",
+      dateTime: "Aug 2022 – Oct 2024",
+      description: [
+        "Architected & deployed company's first open-source data stack (Google BigQuery, Airbyte, Superset), saving estimated $70k+ annually",
+        "Developed 22+ self-serve dashboards (SQL, Superset) for ERP analytics, driving data adoption across 7+ departments",
+        "Created Python/ML customer data unification (NCES linkage) & Python inventory simulation tool (identified ~$500k potential reduction)"
+      ],
     },
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Master Scheduler",
-      dateTime: "Jan 2019 – Jun 2022",
-      description:
-        "Optimized forecasting for 500+ SKUs covering a $50M revenue stream using Meta’s Prophet algorithm. Brokered $6M in emergency component purchases during supply chain disruptions—averting a multi-year shutdown and saving ~$90K in fees. Developed a real-time Python production optimizer that streamlined workflows (reducing admin overhead by ~2 FTEs) and overhauled purchasing with a dynamic push-pull Excel tool, achieving a ~$2M reduction in inventory value.",
+      title: "Senior Supply Chain Analyst",
+      dateTime: "Dec 2018 – Jul 2022",
+      description: [
+        "Developed Python forecasting models (NBEATSx) for 500+ SKUs (~$50M revenue), significantly increasing accuracy",
+        "Reduced inventory value by ~30% ($4M) via ERP optimization, automated EOQ/Safety Stock models, & improved reporting",
+        "Brokered $6M in emergency spot market components during disruptions, averting shutdowns & saving ~$90K",
+        "Owned ERP system optimizations (MRP, BOM, WMS) & built supplier performance portal (Power BI)"
+      ],
     },
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Sr. Materials Buyer/Planner",
-      dateTime: "Jan 2007 – Jan 2019",
-      description:
-        "Progressed from Purchasing Assistant to Sr. Materials Buyer/Planner, configuring and maintaining MRP/ERP systems for multi-warehouse operations. Managed production scheduling and procurement for key suppliers with a $10M annual spend, ensuring seamless production and cost-effective operations.",
+      title: "Senior Supply Chain Planner",
+      dateTime: "Jan 2018 – Dec 2018",
+      description: [
+        "Performed ERP inventory & cost analysis to drive down inventory costs",
+        "Negotiated with Suppliers & optimized supplier processes to reduce labor pricing",
+        "Implemented enhancements to Contract Manufacturer (CM) scheduling processes via Enterprise 21 ERP database integration",
+        "Developed and deployed an Excel-based stockroom-production pull list system to optimize internal material flow"
+      ],
+    },
+    {
+      company: <a href="https://vernier.com">Vernier Science Education</a>,
+      title: "Supply Chain Planner",
+      dateTime: "Jan 2014 – Jan 2018",
+      description: [
+        "Managed end-to-end manufacturing planning for 500+ SKUs, performing inventory, BOM, and cost analysis within Enterprise 21 ERP",
+        "Configured ERP manufacturing modules and stocking level parameters; applied Lean Six Sigma principles (Yellow Belt certified 2015)",
+        "Led cross-functional triage team to proactively identify and expedite critical material shortages"
+      ],
+    },
+    {
+      company: <a href="https://vernier.com">Vernier Science Education</a>,
+      title: "Junior Supply Chain Planner",
+      dateTime: "Apr 2010 – Jan 2014",
+      description: [
+        "Executed purchasing functions for assigned components and coordinated all daily production priorities via team standups"
+      ],
+    },
+    {
+      company: <a href="https://vernier.com">Vernier Science Education</a>,
+      title: "Procurement Assistant",
+      dateTime: "Jan 2007 – Apr 2010",
+      description: [
+        "Supported procurement activities, including purchasing, basic inventory analysis, and stockroom management, utilizing the Enterprise 21 ERP system"
+      ],
+    },
+    {
+      company: <a href="https://vernier.com">Vernier Science Education</a>,
+      title: "Tradeshow Coordinator",
+      dateTime: "Jul 2006 – Jan 2007",
+      description: [
+        "Managed inventory, materials, and shipments for company workshops and trade shows"
+      ],
+    },
+    {
+      company: "Poorman-Douglas",
+      title: "Claims Analyst",
+      dateTime: "Jul 2005 – Jul 2006",
+      description: [
+        "Analyzed claim validity and performed quality control on data entry processes for class action claims"
+      ],
     },
   ];
 
   // Conditionally pick an icon based on role
   const timelineDataWithIcons = timelineData.map((item) => {
-    let icon = <FaShippingFast size={24} />;
-    if (item.title === "Data Analyst" || item.title === "Owner/Developer") {
-      icon = <FaChartLine size={24} />;
+    let icon;
+    switch (item.title) {
+      case "Data Analyst":
+        icon = <FaChartLine size={24} />;
+        break;
+      case "Senior Supply Chain Analyst":
+        icon = <FaChartLine size={24} />;
+        break;
+      case "Senior Supply Chain Planner":
+        icon = <FaBoxes size={24} />;
+        break;
+      case "Supply Chain Planner":
+        icon = <FaBoxes size={24} />;
+        break;
+      case "Junior Supply Chain Planner":
+        icon = <FaShippingFast size={24} />;
+        break;
+      case "Procurement Assistant":
+        icon = <FaClipboardList size={24} />;
+        break;
+      case "Tradeshow Coordinator":
+        icon = <FaHandshake size={24} />;
+        break;
+      case "Claims Analyst":
+        icon = <FaFileAlt size={24} />;
+        break;
+      default:
+        icon = <FaShippingFast size={24} />;
     }
     return { ...item, icon };
   });

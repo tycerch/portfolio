@@ -8,7 +8,7 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chris Tycer - Data & Supply Chain Analyst",
+  title: "Chris Tycer - Data & Business Analyst",
   description:
     "Chris Tycer is a seasoned supply chain and data analytics professional specializing in forecasting, BI development, and systems design. Explore my portfolio to learn more.",
   keywords: [
@@ -19,6 +19,16 @@ export const metadata: Metadata = {
     "Python",
     "SQL",
     "Systems Design",
+    "Data Visualization",
+    "Business Intelligence",
+    "Data-Driven Decision Making",
+    "Data Science",
+    "Data Engineering",
+    "Data Management",
+    "Data Warehousing",
+    "Data Modeling",
+    "Data Analysis",
+    "Business Analytics"
   ],
   creator: "Chris Tycer",
   openGraph: {

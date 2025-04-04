@@ -13,11 +13,21 @@ interface Project {
 }
 
 export default function Projects() {
+  const protests: Project = {
+    title: "US Civil Unrest Analysis",
+    description:
+      "Interactive dashboard analyzing US protest events using GDELT data. Built with Streamlit, Mapbox and Python.",
+    tech: ["Python", "Streamlit", "Pandas", "Mapbox", "GDELT", "SQL"],
+    external: "/protests", // Changed from external URL to internal route
+    image: "/protests-analysis.png",
+    alt: "Screenshot of US Civil Unrest Analysis Dashboard",
+  };
+
   const forecastify: Project = {
     title: "Forecastify.ai",
     description:
       "An innovative forecasting platform designed for small businesses, built with FastAPI and Next.js. Leverages modern time series foundation models to deliver precise, data-driven forecasts.",
-    tech: ["FastAPI", "Next.js", "Python", "Docker"],
+    tech: ["FastAPI", "Next.js", "Python", "Docker", "SQL"],
     external: "https://forecastify.ai",
     image: "/forecastify-ai.png",
     alt: "Screenshot of Forecastify.ai homepage",
@@ -27,13 +37,13 @@ export default function Projects() {
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website built with Next.js and TailwindCSS.",
-    tech: ["Next.js", "TypeScript", "TailwindCSS"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Cloudflare"],
     external: "https://github.com/tycerch/portfolio",
     image: "/portfolio.png",
     alt: "Screenshot of Tycer.dev portfolio website",
   };
 
-  const projects = [forecastify, portfolio];
+  const projects = [protests, forecastify, portfolio];
 
   return (
     <section className="mx-auto max-w-4xl py-24 px-8" id="projects">

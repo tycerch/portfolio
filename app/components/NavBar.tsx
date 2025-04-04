@@ -10,7 +10,6 @@ interface NavItem {
   number: string;
   label: string;
   href: string;
-  isExternal?: boolean;
 }
 
 const navItems: NavItem[] = [
@@ -33,14 +32,8 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (href: string, isExternal?: boolean) => {
+  const handleNavClick = (href: string) => {
     setMobileMenuOpen(false);
-    
-    // Handle internal navigation for protests route
-    if (href === '/protests') {
-      router.push(href);
-      return;
-    }
 
     // Handle hash navigation
     if (pathname !== '/') {
@@ -79,10 +72,10 @@ export default function NavBar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navItems.map(({ number, label, href, isExternal }) => (
+          {navItems.map(({ number, label, href }) => (
             <button
               key={href}
-              onClick={() => handleNavClick(href, isExternal)}
+              onClick={() => handleNavClick(href)}
               className="group flex items-center text-foreground hover:text-highlight transition-colors duration-200"
             >
               <span className="font-mono text-sm text-highlight mr-1">{number}</span>
@@ -106,10 +99,10 @@ export default function NavBar() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-foreground/20 mt-4 px-8 py-4">
           <ul className="flex flex-col gap-6">
-            {navItems.map(({ number, label, href, isExternal }) => (
+            {navItems.map(({ number, label, href }) => (
               <li key={href}>
                 <button
-                  onClick={() => handleNavClick(href, isExternal)}
+                  onClick={() => handleNavClick(href)}
                   className="block text-foreground hover:text-highlight transition-colors duration-200"
                 >
                   <span className="font-mono text-sm text-highlight mr-2">{number}</span>

@@ -65,7 +65,10 @@ export default function Projects() {
           </div>
           <div className="md:w-2/5">
             {/* Image links externally to the project */}
-            <Link href={project.external} target="_blank">
+            <Link 
+              href={project.external} 
+              target={project.external.startsWith('/') ? '_self' : '_blank'}
+            >
               <div className="relative group">
                 <div className="relative aspect-[899/656] bg-background-light rounded-md overflow-hidden">
                   <Image

@@ -4,24 +4,56 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { HiMenu, HiX } from "react-icons/hi";
+import { useRouter, usePathname } from "next/navigation";
 
-const navItems = [
-  { number: "01.", label: "About", href: "#about" },
-  { number: "02.", label: "Projects", href: "#projects" },
-  { number: "03.", label: "Experience", href: "#experience" },
-  { number: "04.", label: "Certifications", href: "#certifications" },
-  { number: "05.", label: "Contact", href: "#contact" },
+interface NavItem {
+  number: string;
+  label: string;
+  href: string;
+  isExternal?: boolean;
+}
+
+const navItems: NavItem[] = [
+  { number: "01.", label: "About", href: "/#about" },
+  { number: "02.", label: "Projects", href: "/#projects" },
+  { number: "03.", label: "Experience", href: "/#experience" },
+  { number: "04.", label: "Certifications", href: "/#certifications" },
+  { number: "05.", label: "Contact", href: "/#contact" },
 ];
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (href: string, isExternal?: boolean) => {
+    setMobileMenuOpen(false);
+    
+    // Handle internal navigation for protests route
+    if (href === '/protests') {
+      router.push(href);
+      return;
+    }
+
+    // Handle hash navigation
+    if (pathname !== '/') {
+      router.push('/');
+      setTimeout(() => {
+        const element = document.querySelector(href.replace('/', ''));
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.querySelector(href.replace('/', ''));
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header
@@ -32,7 +64,7 @@ export default function NavBar() {
       <div className="w-full px-8 flex items-center justify-between">
         {/* Logo / Home */}
         <Link
-          href="#hero"
+          href="/"
           className="flex items-center"
           onClick={() => setMobileMenuOpen(false)}
         >
@@ -47,20 +79,21 @@ export default function NavBar() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navItems.map(({ number, label, href }) => (
-            <Link
+          {navItems.map(({ number, label, href, isExternal }) => (
+            <button
               key={href}
-              href={href}
+              onClick={() => handleNavClick(href, isExternal)}
               className="group flex items-center text-foreground hover:text-highlight transition-colors duration-200"
             >
               <span className="font-mono text-sm text-highlight mr-1">{number}</span>
               {label}
-            </Link>
+            </button>
           ))}
         </nav>
 
         {/* Mobile Menu Button */}
         <button
+          type="button"
           className="md:hidden text-foreground hover:text-highlight transition-colors duration-200"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
@@ -73,16 +106,15 @@ export default function NavBar() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-foreground/20 mt-4 px-8 py-4">
           <ul className="flex flex-col gap-6">
-            {navItems.map(({ number, label, href }) => (
+            {navItems.map(({ number, label, href, isExternal }) => (
               <li key={href}>
-                <Link
-                  href={href}
+                <button
+                  onClick={() => handleNavClick(href, isExternal)}
                   className="block text-foreground hover:text-highlight transition-colors duration-200"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="font-mono text-sm text-highlight mr-2">{number}</span>
                   {label}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>

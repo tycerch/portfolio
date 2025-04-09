@@ -4,7 +4,7 @@ export default function ProtestsPage() {
   return (
     <section className="w-full h-[calc(100vh-80px)]">
       <iframe
-        src="https://tycerch-protests.streamlit.app/?embedded=true"
+        src="https://protests-gdelt-events-demo.fly.dev/?embedded=true"
         width="100%"
         height="100%"
         style={{ border: 'none' }}

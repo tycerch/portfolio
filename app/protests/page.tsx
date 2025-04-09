@@ -1,5 +1,11 @@
 "use client";
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  robots: 'noindex, nofollow',
+};
+
 export default function ProtestsPage() {
   return (
     <section className="w-full h-[calc(100vh-80px)]">

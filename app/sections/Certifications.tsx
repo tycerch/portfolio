@@ -8,26 +8,51 @@ export default function Certifications() {
         <span className="text-highlight mr-2">05.</span> Certifications
         <div className="ml-4 flex-grow border-t border-foreground/20" />
       </h2>
-      <div className="flex flex-col sm:flex-row items-center gap-4">
-        <div className="relative w-20 h-20">
-          <Image
-            src="/lean-six-sigma.png"
-            alt="Lean Six Sigma Certification"
-            fill
-            sizes="(max-width: 768px) 100vw, 20vw"
-            className="object-contain"
-          />
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col sm:flex-row items-center gap-4">
+          <div className="relative w-32 h-32">
+            <Image
+              src="/lean-six-sigma.png"
+              alt="Lean Six Sigma Certification"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-contain"
+            />
+          </div>
+          <div className="text-foreground">
+            <p className="font-medium">Lean Six Sigma Yellow Belt</p>
+            <Link
+              href="https://etigroupusa.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-highlight underline"
+            >
+              ETI Group
+            </Link>
+          </div>
         </div>
-        <div className="text-foreground">
-          <p className="font-medium">Lean Six Sigma Yellow Belt</p>
-          <Link
-            href="https://etigroupusa.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-highlight underline"
-          >
-            ETI Group
-          </Link>
+
+        <div className="flex flex-col sm:flex-row items-center gap-4">
+          <div className="relative w-32 h-32">
+            <Image
+              src="/SQL Associate - badge with outline.png"
+              alt="DataCamp SQL Associate Certification"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-contain"
+            />
+          </div>
+          <div className="text-foreground">
+            <p className="font-medium">SQL Associate Certification</p>
+            <Link
+              href="https://www.datacamp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-highlight underline"
+            >
+              DataCamp
+            </Link>
+          </div>
         </div>
       </div>
     </section>

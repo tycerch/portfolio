@@ -35,7 +35,7 @@ export default function Certifications() {
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <div className="relative w-32 h-32">
             <Image
-              src="/SQL Associate - badge with outline.png"
+              src="/datacamp-sql-associate.png"
               alt="DataCamp SQL Associate Certification"
               fill
               sizes="(max-width: 768px) 100vw, 33vw"

@@ -1,15 +1,19 @@
 import Image from "next/image";
 import React from "react";
 
-// We'll define skill data inline
 const skills = [
-  { name: "Forecasting/ML", rating: 8 },
-  { name: "BI & Dashboards", rating: 7 },
-  { name: "SQL", rating: 7 },
-  { name: "Python", rating: 6 },
-  { name: "Prompt Engineering", rating: 7 },
-  { name: "Supply Chain Optimization", rating: 9 },
-
+  "SQL & Database Design",
+  "Data Analysis & Visualization",
+  "Python Development",
+  "Business Intelligence",
+  "ERP Systems",
+  "Requirements Gathering",
+  "Process Optimization",
+  "Supply Chain Analytics",
+  "Forecasting & ML",
+  "ETL/ELT Pipeline Design",
+  "Power BI & Superset",
+  "System Implementation"
 ];
 
 export default function About() {
@@ -54,28 +58,16 @@ export default function About() {
         </div>
       </div>
 
-      {/* Skills embedded below the text/image */}
+      {/* Skills section */}
       <div className="mt-12">
         <h3 className="text-xl font-bold text-white mb-4">Core Skills</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {skills.map((skill, idx) => (
-            <div key={idx} className="flex flex-col gap-2">
-              {/* Skill Name */}
-              <p className="text-foreground font-medium">{skill.name}</p>
-
-              {/* Stepped Visualization: 10 small squares */}
-              <div className="flex items-center gap-1">
-                {Array.from({ length: 10 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={
-                      i < skill.rating
-                        ? "h-3 w-3 bg-highlight rounded-sm"
-                        : "h-3 w-3 bg-foreground/20 rounded-sm"
-                    }
-                  />
-                ))}
-              </div>
+            <div 
+              key={idx} 
+              className="text-foreground font-medium p-3 rounded-md border border-foreground/20 hover:border-highlight transition-colors duration-200"
+            >
+              {skill}
             </div>
           ))}
         </div>

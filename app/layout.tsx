@@ -8,7 +8,7 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chris Tycer - Data & Business Analyst",
+  title: "Chris Tycer - Data Analyst",
   description:
     "Chris Tycer is a seasoned supply chain and data analytics professional specializing in forecasting, BI development, and systems design. Explore my portfolio to learn more.",
   keywords: [

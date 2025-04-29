@@ -4,7 +4,7 @@ export default function Hero() {
       <p className="text-highlight text-lg md:text-xl mb-1 font-mono">Hi, I&apos;m Chris Tycer</p>
       
       <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-        Data & Business Analyst.
+        Data Analyst.
       </h1>
       <h2 className="text-4xl md:text-6xl font-bold text-foreground/70 mb-8">
         I build data-driven solutions.

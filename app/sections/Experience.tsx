@@ -13,12 +13,13 @@ export default function Experience() {
   const timelineData = [
     {
       company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Data Analyst",
+      title: "Lead Data Analyst",
       dateTime: "Aug 2022 – Oct 2024",
       description: [
-        "Architected & deployed company's first open-source data stack (Google BigQuery, Airbyte, Superset), saving estimated $70k+ annually",
-        "Developed 22+ self-serve dashboards (SQL, Superset) for ERP analytics, driving data adoption across 7+ departments",
-        "Created Python/ML customer data unification (NCES linkage) & Python inventory simulation tool (identified ~$500k potential reduction)"
+        "Sole data analyst responsible for company-wide BI and analytics operations across executive, operations, marketing, and sales functions",
+        "Designed and implemented the company-wide BI stack (Airbyte, BigQuery, Superset), saving ~$70k annually",
+        "Led inventory optimization initiative reducing excess inventory by $500K while increasing turnover",
+        "Developed a real-time production scheduling tool in Python that integrated with the ERP system"
       ],
     },
     {
@@ -26,10 +27,10 @@ export default function Experience() {
       title: "Senior Supply Chain Analyst",
       dateTime: "Dec 2018 – Jul 2022",
       description: [
-        "Developed Python forecasting models (NBEATSx) for 500+ SKUs (~$50M revenue), significantly increasing accuracy",
-        "Reduced inventory value by ~30% ($4M) via ERP optimization, automated EOQ/Safety Stock models, & improved reporting",
-        "Brokered $6M in emergency spot market components during disruptions, averting shutdowns & saving ~$90K",
-        "Owned ERP system optimizations (MRP, BOM, WMS) & built supplier performance portal (Power BI)"
+        "Led end-to-end supply chain strategy and ERP optimization for $50M+ revenue operation and $10M in vendor spend",
+        "Spearheaded crisis response team during global component shortage, averting $80M revenue loss",
+        "Developed Python-based forecasting models (Meta Prophet) to optimize demand planning across 500+ SKUs",
+        "Delivered $2M in working capital savings by improving MRP logic and purchasing parameters"
       ],
     },
     {
@@ -37,10 +38,8 @@ export default function Experience() {
       title: "Senior Supply Chain Planner",
       dateTime: "Jan 2018 – Dec 2018",
       description: [
-        "Performed ERP inventory & cost analysis to drive down inventory costs",
-        "Negotiated with Suppliers & optimized supplier processes to reduce labor pricing",
-        "Implemented enhancements to Contract Manufacturer (CM) scheduling processes via Enterprise 21 ERP database integration",
-        "Developed and deployed an Excel-based stockroom-production pull list system to optimize internal material flow"
+        "Led planning and operations for all manufacturing, managing $10M in annual vendor spend",
+        "Spearheaded ERP/MRP module configuration and led cross-team adoption of operational workflows"
       ],
     },
     {
@@ -48,9 +47,8 @@ export default function Experience() {
       title: "Supply Chain Planner",
       dateTime: "Jan 2014 – Jan 2018",
       description: [
-        "Managed end-to-end manufacturing planning for 500+ SKUs, performing inventory, BOM, and cost analysis within Enterprise 21 ERP",
-        "Configured ERP manufacturing modules and stocking level parameters; applied Lean Six Sigma principles (Yellow Belt certified 2015)",
-        "Led cross-functional triage team to proactively identify and expedite critical material shortages"
+        "Managed global production workflows, inventory planning policies, and consigned inventory programs",
+        "Earned Lean Six Sigma certification and applied statistical process control methods to improve inventory accuracy"
       ],
     },
     {
@@ -58,7 +56,8 @@ export default function Experience() {
       title: "Junior Supply Chain Planner",
       dateTime: "Apr 2010 – Jan 2014",
       description: [
-        "Executed purchasing functions for assigned components and coordinated all daily production priorities via team standups"
+        "Created and implemented foundational ERP processes for production and inventory planning",
+        "Executed purchasing functions for assigned components and coordinated daily production priorities"
       ],
     },
     {
@@ -66,7 +65,8 @@ export default function Experience() {
       title: "Procurement Assistant",
       dateTime: "Jan 2007 – Apr 2010",
       description: [
-        "Supported procurement activities, including purchasing, basic inventory analysis, and stockroom management, utilizing the Enterprise 21 ERP system"
+        "Supported procurement activities, including purchasing, basic inventory analysis, and stockroom management",
+        "Maintained procurement records and updated ERP system data to ensure accuracy in supply planning"
       ],
     },
     {
@@ -74,6 +74,7 @@ export default function Experience() {
       title: "Tradeshow Coordinator",
       dateTime: "Jul 2006 – Jan 2007",
       description: [
+        "Coordinated logistics for national science education trade shows and hands-on educator workshops",
         "Managed inventory, materials, and shipments for company workshops and trade shows"
       ],
     },
@@ -82,7 +83,8 @@ export default function Experience() {
       title: "Claims Analyst",
       dateTime: "Jul 2005 – Jul 2006",
       description: [
-        "Analyzed claim validity and performed quality control on data entry processes for class action claims"
+        "Performed quality control and data analysis for national class action lawsuits",
+        "Analyzed claim validity and performed quality control on data entry processes"
       ],
     },
   ];
@@ -91,7 +93,7 @@ export default function Experience() {
   const timelineDataWithIcons = timelineData.map((item) => {
     let icon;
     switch (item.title) {
-      case "Data Analyst":
+      case "Lead Data Analyst":
         icon = <FaChartLine size={24} />;
         break;
       case "Senior Supply Chain Analyst":

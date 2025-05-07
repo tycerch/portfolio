@@ -4,14 +4,15 @@ export default function Hero() {
       <p className="text-highlight text-lg md:text-xl mb-1 font-mono">Hi, I&apos;m Chris Tycer</p>
       
       <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-        Data Analyst.
+        Lead Data Analyst.
       </h1>
       <h2 className="text-4xl md:text-6xl font-bold text-foreground/70 mb-8">
-        I build data-driven solutions.
+        I transform data into business value.
       </h2>
       <p className="max-w-2xl text-foreground text-lg mb-12">
-        I&apos;m a versatile analyst with 18 years of experience translating complex data into actionable insights to improve supply chain and business operations. 
-        I leverage SQL, Python, ML, and BI tools to optimize systems, enhance forecasting, automate reporting, and drive efficiencies.
+        Former supply chain leader with 18+ years of experience managing $50M in demand and $10M in vendor spend. 
+        I architect enterprise BI systems, deploy ML forecasting models, and lead cross-functional data strategies 
+        using SQL, Python, and modern analytics tools.
       </p>
       <div className="flex gap-4">
         <a

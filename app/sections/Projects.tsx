@@ -23,16 +23,6 @@ export default function Projects() {
     alt: "Screenshot of US Civil Unrest Analysis Dashboard",
   };
 
-  const forecastify: Project = {
-    title: "Forecastify.ai",
-    description:
-      "An innovative forecasting platform designed for small businesses, built with FastAPI and Next.js. Leverages modern time series foundation models to deliver precise, data-driven forecasts.",
-    tech: ["FastAPI", "Next.js", "Python", "Docker", "SQL"],
-    external: "https://forecastify.ai",
-    image: "/forecastify-ai.png",
-    alt: "Screenshot of Forecastify.ai homepage",
-  };
-
   const portfolio: Project = {
     title: "Portfolio Website",
     description:
@@ -43,7 +33,7 @@ export default function Projects() {
     alt: "Screenshot of Tycer.dev portfolio website",
   };
 
-  const projects = [protests, forecastify, portfolio];
+  const projects = [protests, portfolio];
 
   return (
     <section className="mx-auto max-w-4xl py-24 px-8" id="projects">

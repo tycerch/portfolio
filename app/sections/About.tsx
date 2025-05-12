@@ -34,7 +34,7 @@ export default function About() {
           </p>
           <p className="mb-4">
             What truly motivates me is leveraging technology—whether configuring ERP systems, developing Python tools, or building BI dashboards —to bring clarity to complex situations. 
-            I enjoy not just analyzing data, but building systems and tools that empower others to make better decisions, a passion that continues with personal projects like forecastify.ai.
+            I enjoy not just analyzing data, but building systems and tools that empower others to make better decisions, a passion that continues with personal projects and pursuing a degree in Data Analytics.
             I approach problems with a blend of analytical rigor gained from data science and a practical, results-oriented mindset honed through years of operational experience.
           </p>
         </div>

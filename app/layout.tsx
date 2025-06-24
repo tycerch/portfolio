@@ -87,7 +87,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
         </main>
         <footer className="py-6 text-center text-sm text-foreground/60">
-          <p>© {new Date().getFullYear()} Chris Tycer. All rights reserved.</p>
+          <p>© 2025 Chris Tycer. All rights reserved.</p>
         </footer>
       </body>
     </html>

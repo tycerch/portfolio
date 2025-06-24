@@ -1,17 +1,21 @@
 import React from "react";
 
 interface TimelineItemProps {
-  company: string | React.ReactElement;
+  company: string;
+  companyUrl?: string;
   title: string;
   dateTime: string;
+  summary?: string; // Optional summary field
   description: string[] | string; // Modified to accept array of strings
   icon: React.ReactNode;
 }
 
 export function TimelineItem({
   company,
+  companyUrl,
   title,
   dateTime,
+  summary,
   description,
   icon,
 }: TimelineItemProps) {
@@ -24,9 +28,20 @@ export function TimelineItem({
       </div>
       <div>
         <h3 className="text-xl font-bold text-white">
-          {title} <span className="text-highlight">@ {company}</span>
+          {title} <span className="text-highlight">@ 
+            {companyUrl ? (
+              <a href={companyUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                {company}
+              </a>
+            ) : (
+              company
+            )}
+          </span>
         </h3>
         <p className="text-foreground/70 text-sm">{dateTime}</p>
+        {summary && (
+          <p className="mt-2 text-foreground">{summary}</p>
+        )}
         {Array.isArray(description) ? (
           <ul className="mt-2 list-disc list-inside space-y-1">
             {description.map((bullet, index) => (

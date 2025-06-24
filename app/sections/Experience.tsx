@@ -3,119 +3,64 @@ import { TimelineItem } from "../components/timeline/TimelineItem";
 import { 
   FaChartLine, 
   FaShippingFast, 
-  FaBoxes, 
-  FaClipboardList,
-  FaHandshake,
-  FaFileAlt
+  FaBoxes
 } from "react-icons/fa";
 
 export default function Experience() {
   const timelineData = [
     {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Lead Data Analyst",
+      company: "Vernier Science Education",
+      companyUrl: "https://vernier.com",
+      title: "Data Analyst",
       dateTime: "Aug 2022 – Oct 2024",
+      summary: "Architected comprehensive BI operations and delivered advanced analytics solutions across all business functions",
       description: [
-        "Sole data analyst responsible for company-wide BI and analytics operations across executive, operations, marketing, and sales functions",
-        "Designed and implemented the company-wide BI stack (Airbyte, BigQuery, Superset), saving ~$70k annually",
-        "Led inventory optimization initiative reducing excess inventory by $500K while increasing turnover",
-        "Developed a real-time production scheduling tool in Python that integrated with the ERP system"
+        "Architected enterprise-wide BI infrastructure (Airbyte, BigQuery, Apache Superset) serving all business functions",
+        "Built machine learning forecasting models for $50M revenue stream across 500 SKUs using Python and statistical analysis",
+        "Led customer data enrichment project using ML and SQL to create detailed profiles by linking institutional records to national education database",
+        "Optimized inventory analytics for 5,000 SKUs using advanced algorithms, delivering $500K in cost savings"
       ],
     },
     {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Senior Supply Chain Analyst",
+      company: "Vernier Science Education",
+      companyUrl: "https://vernier.com",
+      title: "Supply Chain Analyst",
       dateTime: "Dec 2018 – Jul 2022",
+      summary: "Applied advanced analytics to transform supply chain operations while managing critical vendor relationships and crisis response",
       description: [
-        "Led end-to-end supply chain strategy and ERP optimization for $50M+ revenue operation and $10M in vendor spend",
-        "Spearheaded crisis response team during global component shortage, averting $80M revenue loss",
-        "Developed Python-based forecasting models (Meta Prophet) to optimize demand planning across 500+ SKUs",
-        "Delivered $2M in working capital savings by improving MRP logic and purchasing parameters"
+        "Prevented $80M revenue loss during global semiconductor shortage through data-driven crisis management across 10-country supplier network",
+        "Automated production planning using Python algorithms for real-time prioritization, reducing backorders and lead times",
+        "Implemented advanced forecasting using Meta's Prophet model to optimize inventory levels, reducing holding costs by $2M",
+        "Served as Enterprise 21 ERP technical lead for supply chain modules, configurations, and custom reporting solutions"
       ],
     },
     {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Senior Supply Chain Planner",
-      dateTime: "Jan 2018 – Dec 2018",
-      description: [
-        "Led planning and operations for all manufacturing, managing $10M in annual vendor spend",
-        "Spearheaded ERP/MRP module configuration and led cross-team adoption of operational workflows"
-      ],
-    },
-    {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
+      company: "Vernier Science Education",
+      companyUrl: "https://vernier.com",
       title: "Supply Chain Planner",
-      dateTime: "Jan 2014 – Jan 2018",
+      dateTime: "Apr 2010 – Nov 2018",
+      summary: "Established foundational analytical processes while managing complex global production and vendor operations",
       description: [
-        "Managed global production workflows, inventory planning policies, and consigned inventory programs",
-        "Earned Lean Six Sigma certification and applied statistical process control methods to improve inventory accuracy"
+        "Managed global production workflows across 20+ suppliers in 10 countries, overseeing $10M+ in annual purchase orders",
+        "Established company's first formal production planning standards and analytical frameworks for scalable growth",
+        "Developed vendor performance analytics and supplier scorecards enabling data-driven supplier evaluation",
+        "Led Enterprise 21 ERP implementation for WMS, MRP, BOM management, and item master data integrity"
       ],
-    },
-    {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Junior Supply Chain Planner",
-      dateTime: "Apr 2010 – Jan 2014",
-      description: [
-        "Created and implemented foundational ERP processes for production and inventory planning",
-        "Executed purchasing functions for assigned components and coordinated daily production priorities"
-      ],
-    },
-    {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Procurement Assistant",
-      dateTime: "Jan 2007 – Apr 2010",
-      description: [
-        "Supported procurement activities, including purchasing, basic inventory analysis, and stockroom management",
-        "Maintained procurement records and updated ERP system data to ensure accuracy in supply planning"
-      ],
-    },
-    {
-      company: <a href="https://vernier.com">Vernier Science Education</a>,
-      title: "Tradeshow Coordinator",
-      dateTime: "Jul 2006 – Jan 2007",
-      description: [
-        "Coordinated logistics for national science education trade shows and hands-on educator workshops",
-        "Managed inventory, materials, and shipments for company workshops and trade shows"
-      ],
-    },
-    {
-      company: "Poorman-Douglas",
-      title: "Claims Analyst",
-      dateTime: "Jul 2005 – Jul 2006",
-      description: [
-        "Performed quality control and data analysis for national class action lawsuits",
-        "Analyzed claim validity and performed quality control on data entry processes"
-      ],
-    },
+    }
   ];
 
   // Conditionally pick an icon based on role
   const timelineDataWithIcons = timelineData.map((item) => {
     let icon;
     switch (item.title) {
-      case "Lead Data Analyst":
+      case "Data Analyst":
         icon = <FaChartLine size={24} />;
         break;
-      case "Senior Supply Chain Analyst":
+      case "Supply Chain Analyst":
         icon = <FaChartLine size={24} />;
-        break;
-      case "Senior Supply Chain Planner":
-        icon = <FaBoxes size={24} />;
         break;
       case "Supply Chain Planner":
         icon = <FaBoxes size={24} />;
-        break;
-      case "Junior Supply Chain Planner":
-        icon = <FaShippingFast size={24} />;
-        break;
-      case "Procurement Assistant":
-        icon = <FaClipboardList size={24} />;
-        break;
-      case "Tradeshow Coordinator":
-        icon = <FaHandshake size={24} />;
-        break;
-      case "Claims Analyst":
-        icon = <FaFileAlt size={24} />;
         break;
       default:
         icon = <FaShippingFast size={24} />;

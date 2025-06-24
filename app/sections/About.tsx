@@ -2,18 +2,18 @@ import Image from "next/image";
 import React from "react";
 
 const skills = [
-  "SQL & Database Design",
-  "Data Analysis & Visualization",
-  "Python Development",
-  "Business Intelligence",
-  "ERP Systems",
-  "Requirements Gathering",
-  "Process Optimization",
-  "Supply Chain Analytics",
-  "Forecasting & ML",
+  "Python & Machine Learning",
+  "SQL & Data Warehousing",
+  "BI Architecture & Visualization",
+  "Statistical Analysis & Forecasting",
   "ETL/ELT Pipeline Design",
-  "Power BI & Superset",
-  "System Implementation"
+  "Supply Chain Analytics",
+  "ERP Systems & Integration",
+  "Cross-functional Collaboration",
+  "Data Modeling & Governance",
+  "BigQuery & Apache Superset",
+  "Crisis Management & Strategy",
+  "Process Optimization"
 ];
 
 export default function About() {
@@ -28,14 +28,13 @@ export default function About() {
         {/* Text Content */}
         <div className="md:w-2/3 text-foreground leading-7">
           <p className="mb-4">
-            My path has been one of continuous evolution, starting deep within supply chain operations and naturally progressing towards a focus on data analytics. 
-            Over 18 years, primarily with one company, I&apos;ve moved from managing procurement and planning to architecting data solutions, 
-            driven by a consistent desire to optimize processes and uncover efficiencies.
+            I&apos;m a Data Analyst with 18+ years of specialized operations and supply chain expertise, combining advanced analytics, machine learning, and BI architecture to drive cross-departmental business transformations. 
+            My experience spans from preventing $80M in revenue loss during global semiconductor disruptions through data-driven crisis management to architecting enterprise BI infrastructure that serves entire organizations.
           </p>
           <p className="mb-4">
-            What truly motivates me is leveraging technology—whether configuring ERP systems, developing Python tools, or building BI dashboards —to bring clarity to complex situations. 
-            I enjoy not just analyzing data, but building systems and tools that empower others to make better decisions, a passion that continues with personal projects and pursuing a degree in Data Analytics.
-            I approach problems with a blend of analytical rigor gained from data science and a practical, results-oriented mindset honed through years of operational experience.
+            I architect enterprise BI solutions, develop custom analytical tools using Python and machine learning, and excel at working across executive, sales, marketing, and operations teams. 
+            My approach blends deep technical skills with strong facilitation abilities, enabling me to translate complex data insights into actionable business strategies. 
+            Currently completing my Bachelor&apos;s in Data Analytics to further strengthen my analytical foundation.
           </p>
         </div>
 
